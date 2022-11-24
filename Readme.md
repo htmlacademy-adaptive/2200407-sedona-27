@@ -1,7 +1,7 @@
 # Личный проект «Седона» 
 
 * Студент: [Анна Москвина](https://up.htmlacademy.ru/adaptive/27/user/2200407).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Панасюк](https://htmlacademy.ru/profile/sasha_oldsport).
 
 ---
 
