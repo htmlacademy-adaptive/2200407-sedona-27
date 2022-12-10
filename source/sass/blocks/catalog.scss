@@ -25,14 +25,15 @@
 .catalog__video {
   padding-top: 17px;
 }
+
 .catalog__video-title {
   margin-bottom: 27px;
 }
+
 .catalog__video-image {
   margin-top: 38px;
 }
+
 .catalog__card {
   @include font-set(14px, 21px, 700);
 }
-
-

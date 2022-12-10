@@ -6,15 +6,13 @@
   box-sizing: border-box;
   text-align: center;
   padding: 28px 18px 23px 18px;
-
 }
 
 .footer__hashtag {
-  color:$black;
   @include font-set(21px, 26px, 700);
+  color: $black;
   margin-bottom: 33px;
   text-decoration: none;
-
 }
 
 .footer__social {
@@ -25,7 +23,6 @@
   @include list-style-reset;
   display: flex;
   flex-wrap: wrap;
-
 }
 
 .footer__social-item:not(:last-child) {
@@ -38,7 +35,7 @@
   display: inline-block;
   box-sizing: border-box;
   height: 48px;
-  width:48px;
+  width: 48px;
 }
 
 .footer__copyright-link {
@@ -47,7 +44,7 @@
   flex-wrap: wrap;
   align-items: center;
   box-sizing: border-box;
-  color:$black;
+  color: $black;
   text-transform: uppercase;
   text-decoration: none;
 }

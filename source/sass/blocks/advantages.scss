@@ -1,8 +1,8 @@
 .advantages {
+  @include font-set(18px, 26px, 700);
   position: relative;
   box-sizing: border-box;
   color: $white;
-  @include font-set(18px, 26px, 700);
 
   &::before {
     position: absolute;
@@ -110,6 +110,7 @@
     content: "";
     background-repeat: no-repeat;
   }
+
   &--present::before {
     background-image: url("../img/icon-present.svg");
     width: 40px;
