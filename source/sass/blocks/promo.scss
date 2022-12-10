@@ -1,0 +1,28 @@
+.promo {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 158px;
+  background-color: $basic-blue;
+  background-image: url("../img/back-main-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 52px;
+  padding-bottom: 67px;
+  text-align: center;
+
+  &--main {
+    min-height: 389px;
+    padding-top: 90px;
+    padding-bottom: 85px;
+  }
+
+  &::before {
+    position: absolute;
+    background-image: url("../img/divider.svg");
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 57px;
+    content: "";
+  }
+}

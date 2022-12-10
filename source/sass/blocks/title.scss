@@ -1,0 +1,5 @@
+.title {
+  @include font-set(18px, 26px, 700);
+  text-transform: uppercase;
+  margin: 0;
+}

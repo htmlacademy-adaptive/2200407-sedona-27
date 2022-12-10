@@ -1,0 +1,46 @@
+.navigation {
+  position: relative;
+}
+
+.navigation__logo-link {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navigation__button-toggle {
+  background-image: url("../img/icon-toggle.svg");
+  width: 23px;
+  height: 22px;
+  border: none;
+}
+
+.navigation__list {
+  @include list-style-reset;
+  @include font-set(18px, 26px, 700);
+  background-color: $basic-blue;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navigation__item {
+  box-shadow: $shadow-list;
+
+  &:first-child {
+    box-shadow: $shadow-list-first;
+  }
+
+  &:last-child {
+    box-shadow: $shadow-list-last;
+  }
+}
+
+.navigation__link {
+  display: inline-block;
+  color: $white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 17px 0 12px 0;
+}

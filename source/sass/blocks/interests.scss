@@ -1,0 +1,28 @@
+.interests {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 38px 18px 49px 18px;
+}
+
+.interests__title {
+  @include font-set(21px, 26px, 700);
+  color: $black;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.interests__description {
+  @include font-set(14px, 21px, 400);
+  color: $black;
+  text-transform: uppercase;
+  margin: 0 0 32px 0;
+}
+
+.interests__link-button {
+  @include font-set(21px, 26px, 700);
+  min-width: 284px;
+  min-height: 58px;
+  padding: 16px 49px;
+}

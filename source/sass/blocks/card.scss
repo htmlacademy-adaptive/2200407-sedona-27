@@ -1,0 +1,35 @@
+.card {
+  border-bottom: 1px solid $basic-gray;
+  padding: 24px 0 25px 0;
+
+  &:first-child {
+    border-top: 1px solid $basic-gray;
+  }
+}
+
+.card__image {
+  margin-bottom: 15px;
+}
+
+.card__description {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+.card__title {
+  @include font-set(14px, 21px, 700);
+  text-transform: uppercase;
+  margin: 0 0 1px 0;
+}
+
+.card__author {
+  @include font-set(14px, 21px, 400);
+  margin-bottom: 11px;
+  text-align: left;
+}
+
+.like-button__counter {
+  @include font-set(14px, 21px, 700);
+}

@@ -1,0 +1,150 @@
+.feedback-form {
+  margin-top: 36px;
+  margin-bottom: 24px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.feedback-form__title {
+  @include font-set(18px, 26px, 700);
+  margin: 0 0 24px 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.feedback-form__description {
+  @include font-set(14px, 21px, 400);
+  margin-bottom: 28px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.feedback-form__group {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 0;
+  margin: 0 0 39px 0;
+  border: none;
+
+  &--introduction {
+    margin-bottom: 23px;
+  }
+
+  &--contacts {
+    margin-bottom: 18px;
+  }
+}
+
+.feedback-form__group-title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.feedback-form__field {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.feedback-form__label {
+  @include font-set(14px, 21px, 400);
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 16px;
+
+  &--action {
+    padding-left: 62px;
+  }
+}
+
+.feedback-form__input {
+  @include font-set(18px, 26px, 700);
+  font-family: inherit;
+  background-color: $gray-lighter;
+  padding: 16px;
+  color: $black;
+  border: none;
+
+  &::placeholder {
+    color: $black-opacity-30;
+  }
+}
+
+.feedback-form__list {
+  @include list-style-reset;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.feedback-form__item {
+  display: flex;
+  align-items: center;
+  min-height: 46px;
+
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.feedback-form__item-text {
+  @include font-set(18px, 26px, 700);
+}
+
+.feedback-form__mark {
+  position: absolute;
+  left: 0;
+  top: -12px;
+  width: 46px;
+  height: 46px;
+  background-color: $gray-lighter;
+  content: "";
+
+  &--radio {
+    border-radius: 50%;
+  }
+
+  &--checkbox {
+    border-radius: 4px;
+  }
+}
+
+.feedback-form__textarea {
+  @include font-set(18px, 26px, 700);
+  background-color: $gray-lighter;
+  font-family: inherit;
+  padding: 16px;
+  border: none;
+
+  &::placeholder {
+    color: $black-opacity-30;
+  }
+}
+
+.feedback-form__group-button {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+}
+
+.feedback-form__button {
+  @include font-set(21px, 26px, 700);
+  padding: 16px 49px 16px;
+  width: 280px;
+  height: 58px;
+  font-family: inherit;
+  border: none;
+  margin-bottom: 3px;
+}
+
+.feedback-form__text-required {
+  @include font-set(12px, 21px, 400);
+  text-transform: uppercase;
+  text-align: right;
+  color: $gray-lighter-opacity-60;
+}

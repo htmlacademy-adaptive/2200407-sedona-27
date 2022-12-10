@@ -1,0 +1,139 @@
+.advantages {
+  @include font-set(18px, 26px, 700);
+  position: relative;
+  box-sizing: border-box;
+  color: $white;
+
+  &::before {
+    position: absolute;
+    background-image: url("../img/divider-second.svg");
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 37px;
+    content: "";
+  }
+}
+
+.advantages__row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advantages__inform {
+  box-sizing: border-box;
+
+  min-height: 211px;
+  background-color: $basic-blue;
+  color: $white;
+  text-align: center;
+  padding: 37px 18px;
+
+  &--divider {
+    padding: 54px 18px 40px 18px;
+  }
+}
+
+.advantages__title {
+  @include font-set(18px, 26px, 700);
+  text-transform: uppercase;
+  margin-bottom: 11px;
+}
+
+.advantages__number {
+  @include font-set(14px, 21px, 400);
+  display: inline-block;
+  margin-bottom: 17px;
+}
+
+.advantages__description {
+  @include font-set(14px, 21px, 400);
+  color: $white;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.advantages__list {
+  @include list-style-reset;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 0 18px 28px 18px;
+
+  &--icon {
+    padding: 23px 18px 46px 18px;
+  }
+
+  &--numbers {
+    background-color: $gray-background;
+  }
+}
+
+.advantages__item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+
+  &--border {
+    padding: 24px 8px;
+  }
+
+  &--border:not(:last-child) {
+    border-bottom: 1px solid $gray-border;
+  }
+
+  &--icon {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 7px;
+    padding: 0;
+    border-bottom: 0;
+  }
+
+  &--icon:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  &--housing::before {
+    background-image: url("../img/icon-house.svg");
+    width: 40px;
+    height: 40px;
+    content: "";
+  }
+
+  &--food::before {
+    background-image: url("../img/icon-food.svg");
+    width: 40px;
+    height: 40px;
+    content: "";
+    background-repeat: no-repeat;
+  }
+
+  &--present::before {
+    background-image: url("../img/icon-present.svg");
+    width: 40px;
+    height: 40px;
+    content: "";
+  }
+}
+
+.advantages__item-title {
+  margin-bottom: 9px;
+  color: $black;
+}
+
+.advantages__item-number {
+  padding-bottom: 22px;
+  color: $black-lighter;
+}
+
+.advantages__item-description {
+  @include font-set(14px, 21px, 400);
+  color: $black-lighter;
+  text-transform: uppercase;
+  margin: 0;
+  grid-column-start: -1;
+  grid-column-end: -2;
+}
