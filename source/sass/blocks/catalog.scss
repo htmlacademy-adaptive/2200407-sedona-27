@@ -1,0 +1,38 @@
+.catalog {
+  margin-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.catalog__title {
+  margin-bottom: 15px;
+}
+
+.catalog__description {
+  @include font-set(14px, 21px, 400);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.catalog__list {
+  @include list-style-reset;
+  margin-top: 45px;
+  display: grid;
+  align-items: center;
+}
+
+.catalog__video {
+  padding-top: 17px;
+}
+.catalog__video-title {
+  margin-bottom: 27px;
+}
+.catalog__video-image {
+  margin-top: 38px;
+}
+.catalog__card {
+  @include font-set(14px, 21px, 700);
+}
+
+
