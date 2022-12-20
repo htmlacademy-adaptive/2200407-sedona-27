@@ -1,0 +1,15 @@
+.container {
+  width: $mobile;
+  background-color: $white;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    width: $tablet;
+  }
+
+  @media (min-width: $desktop) {
+    box-sizing: border-box;
+    width: $desktop;
+    box-shadow: $shadow-main;
+  }
+}

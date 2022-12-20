@@ -2,15 +2,31 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  box-sizing: border-box;
   align-items: center;
   padding: 38px 18px 49px 18px;
+
+  @media (min-width: $tablet) {
+    padding: 60px 166px 58px 167px;
+    height: 318px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 61px 371px 66px 371px;
+    height: 331px;
+  }
 }
 
 .interests__title {
   @include font-set(21px, 26px, 700);
   color: $black;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
+
+  @media (min-width: $tablet) {
+    @include font-set(30px, 26px, 700);
+    margin-bottom: 21px;
+  }
 }
 
 .interests__description {
@@ -18,6 +34,11 @@
   color: $black;
   text-transform: uppercase;
   margin: 0 0 32px 0;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 40px;
+  }
 }
 
 .interests__link-button {
