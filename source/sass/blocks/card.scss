@@ -1,35 +1,92 @@
 .card {
+  @include font-set(14px, 21px, 700);
+  position: relative;
+  display: flex;
+  flex-direction: column;
   border-bottom: 1px solid $basic-gray;
   padding: 24px 0 25px 0;
+  box-sizing: border-box;
 
   &:first-child {
     border-top: 1px solid $basic-gray;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 0;
+    border-bottom: none;
+
+    &:first-child {
+      border-top: none;
+    }
   }
 }
 
 .card__image {
   margin-bottom: 15px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+    width: 324px;
+    height: 267px;
+
+    .card:first-child & {
+      width: 648px;
+      height: 400px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    width: 400px;
+
+    .card:first-child & {
+      width: 1200px;
+    }
+  }
 }
 
 .card__description {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-content: flex-start;
+  display: grid;
+  grid-template-columns: 1fr;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr 1fr;
+    min-height: 80px;
+    background-color: $gray-lighter;
+    padding: 22px 20px 15px 20px;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $black-opacity-30;
+    color: $white;
+  }
 }
 
 .card__title {
   @include font-set(14px, 21px, 700);
   text-transform: uppercase;
   margin: 0 0 1px 0;
+  text-align: left;
 }
 
 .card__author {
   @include font-set(14px, 21px, 400);
   margin-bottom: 11px;
   text-align: left;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
 }
 
-.like-button__counter {
-  @include font-set(14px, 21px, 700);
+.card__button {
+  @media (min-width: $tablet) {
+    grid-column: -1/-2;
+    grid-row: -3/-1;
+  }
 }

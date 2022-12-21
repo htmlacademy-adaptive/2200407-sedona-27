@@ -6,17 +6,40 @@
   box-sizing: border-box;
   text-align: center;
   padding: 28px 18px 23px 18px;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 120px;
+    width: 100%;
+    padding: 36px 76px 36px 45px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 36px 136px 36px 104px;
+  }
 }
 
 .footer__hashtag {
   @include font-set(21px, 26px, 700);
+  width: 166px;
+  text-align: center;
   color: $black;
   margin-bottom: 33px;
   text-decoration: none;
+
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .footer__social {
   margin-bottom: 40px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .footer__social-list {

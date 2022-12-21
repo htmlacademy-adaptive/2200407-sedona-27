@@ -1,12 +1,22 @@
 .inform {
   padding: 32px 18px 33px 18px;
   text-align: center;
+
+  @media (min-width: $tablet) {
+    max-width: 484px;
+    margin: 0 auto;
+  }
 }
 
 .inform__title {
   @include font-set(18px, 26px, 700);
   text-transform: uppercase;
   margin-bottom: 35px;
+
+  @media (min-width: $tablet) {
+    @include font-set(21px, 26px, 700);
+    margin-bottom: 30px;
+  }
 }
 
 .inform__description {
