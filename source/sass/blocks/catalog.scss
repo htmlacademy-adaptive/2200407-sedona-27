@@ -38,6 +38,12 @@
       padding: 0 101px;
     }
   }
+
+  @media (min-width: $desktop) {
+    &--video {
+      padding: 0 177px;
+    }
+  }
 }
 
 .catalog__list {
@@ -63,6 +69,8 @@
 
   @media (min-width: $desktop) {
     padding-top: 66px;
+    padding-left: 199px;
+    padding-right: 201px;
   }
 }
 
@@ -75,18 +83,41 @@
   }
 }
 
-.catalog__video-image {
+.catalog__video-container {
+  position: relative;
   margin-top: 38px;
 
+  &::before {
+    position: absolute;
+    background-image: url("../img/icon-play.svg");
+    width: 48px;
+    height: 54px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    content: "";
+  }
+
   @media (min-width: $tablet) {
-    width: 648px;
-    height: 500px;
     margin-top: 88px;
   }
 
   @media (min-width: $desktop) {
-    width: 800px;
     margin-top: 86px;
+  }
+}
+
+.catalog__video-show {
+  width: 280px;
+  height: 177px;
+
+  @media (min-width: $tablet) {
+    width: 648px;
+    height: 500px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 800px;
   }
 }
 

@@ -1,5 +1,91 @@
 .navigation {
   position: relative;
+
+  @media (max-width: $mobile-width-only) {
+    &--closed {
+      width: auto;
+
+      .navigation__list {
+        display: none;
+      }
+
+      .navigation__button-toggle::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 23px;
+        height: 4px;
+        background-color: $basic-blue;
+        box-shadow: 0 10px 0 0 $basic-blue, 0 20px 0 0 $basic-blue;
+      }
+
+      .navigation__button-toggle:hover::before {
+        background-color: rgba($basic-blue, 0.6);
+        box-shadow: 0 10px 0 0 rgba($basic-blue, 0.6), 0 20px 0 0 rgba($basic-blue, 0.6);
+      }
+    }
+
+    &--opened {
+      .navigation__button-toggle::before,
+      .navigation__button-toggle::after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        right: 0;
+        width: 22px;
+        height: 4px;
+        background-color: $white;
+      }
+
+      .navigation__button-toggle::before {
+        transform: rotate(45deg);
+      }
+
+      .navigation__button-toggle::after {
+        transform: rotate(-45deg);
+      }
+
+      .navigation__button-toggle:hover::before,
+      .navigation__button-toggle:hover::after {
+        background-color: rgba($white, 0.6);
+      }
+
+      .navigation__button-toggle:active::before,
+      .navigation__button-toggle:active::after {
+        background-color: rgba($white, 0.3);
+      }
+
+      .navigation__list::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: 7px;
+        background: $shadow-menu-bottom;
+      }
+    }
+
+    &--nojs {
+      .main-nav__toggle,
+      .navigation__logo-link {
+        display: none;
+      }
+
+      .navigation__list {
+        position: static;
+        display: block;
+      }
+    }
+  }
+
+  @media (min-width: $tablet) {
+    .navigation__list {
+      display: grid;
+    }
+  }
 }
 
 .navigation__logo-link {
@@ -12,10 +98,21 @@
 }
 
 .navigation__button-toggle {
-  background-image: url("../img/icon-toggle.svg");
+  position: absolute;
+  background-color: transparent;
+  top: 17px;
+  right: 20px;
   width: 23px;
   height: 22px;
   border: none;
+  cursor: pointer;
+  z-index: 10;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
 
   @media (min-width: $tablet) {
     display: none;
@@ -25,7 +122,7 @@
 .navigation__list {
   @include list-style-reset;
   @include font-set(18px, 26px, 700);
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -92,12 +189,37 @@
   width: 100%;
   text-align: center;
 
+  @media (max-width: $mobile-width-only) {
+    &:hover,
+    &:focus {
+      background-color: $basic-blue-hover;
+      box-shadow: $shadow-list;
+      outline: none;
+    }
+
+    &:active {
+      background-color: $basic-blue-active;
+      color: rgba($white, 0.3);
+      box-shadow: $shadow-list;
+    }
+  }
+
   @media (min-width: $tablet) {
     color: $black;
     height: 56px;
 
     &--current {
       color: $basic-brown;
+    }
+
+    &:hover,
+    &:focus {
+      color: $basic-blue;
+      outline: none;
+    }
+
+    &:active {
+      color: rgba($black, 0.3);
     }
   }
 }

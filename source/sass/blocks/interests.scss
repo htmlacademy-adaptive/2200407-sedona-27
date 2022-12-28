@@ -43,7 +43,16 @@
 
 .interests__link-button {
   @include font-set(21px, 26px, 700);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-width: 284px;
   min-height: 58px;
   padding: 16px 49px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet) {
+    padding: 14px 121px 17px 121px;
+    width: 458px;
+  }
 }

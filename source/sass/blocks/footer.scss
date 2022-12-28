@@ -10,7 +10,7 @@
   @media (min-width: $tablet) {
     flex-direction: row;
     justify-content: space-between;
-    height: 120px;
+    min-height: 120px;
     width: 100%;
     padding: 36px 76px 36px 45px;
   }
@@ -28,6 +28,15 @@
   margin-bottom: 33px;
   text-decoration: none;
 
+  &:hover,
+  &:focus {
+    color: $basic-blue;
+    outline: none;
+  }
+
+  &:active {
+    color: $gray-active;
+  }
 
   @media (min-width: $tablet) {
     margin-bottom: 0;
@@ -46,10 +55,17 @@
   @include list-style-reset;
   display: flex;
   flex-wrap: wrap;
+  max-width: 270px;
 }
 
-.footer__social-item:not(:last-child) {
-  padding-right: 6px;
+.footer__social-item {
+  &:not(:last-child) {
+    padding-right: 6px;
+  }
+
+  &:nth-child(n+6) {
+    padding-top: 6px;
+  }
 }
 
 .footer__social-button {
@@ -59,6 +75,21 @@
   box-sizing: border-box;
   height: 48px;
   width: 48px;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    background-color: $basic-blue-hover;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $basic-blue-active;
+
+    .footer__social-icon {
+      fill: $white-opacity-30;
+    }
+  }
 }
 
 .footer__copyright-link {
@@ -70,6 +101,16 @@
   color: $black;
   text-transform: uppercase;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $basic-blue;
+    outline: none;
+  }
+
+  &:active {
+    color: $gray-active;
+  }
 }
 
 .footer__copyright-logo {
