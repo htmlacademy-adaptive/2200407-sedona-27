@@ -182,7 +182,7 @@
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
-  height: 55px;
+  padding: 17px 20px 12px 20px;
   color: $white;
   text-transform: uppercase;
   text-decoration: none;
@@ -206,7 +206,7 @@
 
   @media (min-width: $tablet) {
     color: $black;
-    height: 56px;
+    min-height: 56px;
 
     &--current {
       color: $basic-brown;
