@@ -33,7 +33,6 @@
 
 .advantages__inform {
   box-sizing: border-box;
-  min-height: 211px;
   background-color: $basic-blue;
   color: $white;
   text-align: center;
@@ -45,7 +44,6 @@
 
   @media (min-width: $tablet) {
     width: 256px;
-    min-height: 256px;
     padding: 52px 33px 31px 33px;
   }
 
@@ -102,7 +100,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  padding: 0 18px 28px 18px;
+  padding: 0 18px;
 
   &--icon {
     padding: 23px 18px 46px 18px;
@@ -131,6 +129,14 @@
 
   &--border:not(:last-child) {
     border-bottom: 1px solid $gray-border;
+  }
+
+  &--border:nth-child(2) {
+    padding: 24px 24px;
+  }
+
+  &--border:last-child {
+    padding: 24px 12px 28px 12px;
   }
 
   &--icon {
@@ -192,13 +198,13 @@
       margin-bottom: 14px;
     }
 
-    &--border {
-      padding: 41px 33px;
+    &--border:nth-child(2) {
+      padding: 41px 43px;
     }
 
     &--border:first-child,
     &--border:last-child {
-      padding: 52px 53px;
+      padding: 52px 30px;
     }
   }
 
@@ -229,7 +235,7 @@
       margin-bottom: 26px;
     }
 
-    &--border {
+    &--border:nth-child(2) {
       padding: 52px 50px 51px 50px;
     }
 
@@ -252,10 +258,16 @@
       margin-bottom: 0;
     }
   }
+
+  @media (min-width: $desktop) {
+    &--numbers {
+      margin: 0 71px;
+    }
+  }
 }
 
 .advantages__item-number {
-  padding-bottom: 22px;
+  margin-bottom: 22px;
   color: $black-lighter;
 
   @media (min-width: $tablet) {
@@ -274,6 +286,10 @@
   margin: 0;
   grid-column-start: -1;
   grid-column-end: -2;
+
+  &--center {
+    text-align: center;
+  }
 
   @media (min-width: $tablet) {
     text-align: center;

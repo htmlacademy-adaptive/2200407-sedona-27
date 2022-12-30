@@ -4,4 +4,16 @@
   background-color: $basic-blue;
   text-decoration: none;
   text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $basic-blue-hover;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $basic-blue-active;
+    color: $white-opacity-30;
+  }
 }

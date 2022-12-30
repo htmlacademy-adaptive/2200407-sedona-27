@@ -19,10 +19,13 @@
   &::before {
     position: absolute;
     background-image: url("../img/divider.svg");
+    background-repeat: no-repeat;
+    background-position: center;
     bottom: 0;
     left: 0;
     right: 0;
     height: 57px;
+    width: 100%;
     content: "";
   }
 
