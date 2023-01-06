@@ -39,17 +39,26 @@
   padding: 37px 18px;
 
   &--divider {
-    padding: 54px 18px 40px 18px;
+    padding: 50px 18px 40px 18px;
   }
 
   @media (min-width: $tablet) {
     width: 256px;
+    min-height: 256px;
     padding: 52px 33px 31px 33px;
   }
 
   @media (min-width: $desktop) {
     width: 400px;
     padding: 52px 50px 51px 50px;
+  }
+}
+
+.advantages__wrapper-img {
+  height: 260px;
+
+  @media (min-width: $tablet) {
+    height: 256px;
   }
 }
 

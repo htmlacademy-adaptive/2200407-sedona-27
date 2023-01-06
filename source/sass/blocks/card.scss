@@ -21,11 +21,19 @@
   }
 }
 
-.card__image {
+.card__wrapper-img {
   margin-bottom: 15px;
 
   @media (min-width: $tablet) {
     margin-bottom: 0;
+  }
+}
+
+.card__image,
+.card__wrapper-img {
+  height: 280px;
+
+  @media (min-width: $tablet) {
     width: 324px;
     height: 267px;
 

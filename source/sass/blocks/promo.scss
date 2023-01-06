@@ -4,11 +4,16 @@
   min-height: 158px;
   background-color: $basic-blue;
   background-image: url("../img/back-main-mobile.jpg");
+  background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 52px;
   padding-bottom: 67px;
   text-align: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-main-mobile@2x.jpg");
+  }
 
   &--main {
     min-height: 389px;
@@ -32,10 +37,53 @@
   @media (min-width: $tablet) {
     min-height: 290px;
     padding: 95px 0 117px 0;
+    background-image: url("../img/back-main-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-main-tablet@2x.jpg");
+    }
+
+    &--main {
+      min-height: 518px;
+      padding-top: 77px;
+      padding-bottom: 91px;
+    }
   }
 
   @media (min-width: $desktop) {
     min-height: 301px;
     padding: 101px 0 120px 0;
+    background-image: url("../img/back-main-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-main-desktop@2x.jpg");
+    }
+
+    &--main {
+      min-height: 518px;
+      padding-top: 78px;
+      padding-bottom: 90px;
+    }
+  }
+}
+
+.promo__label {
+  @media (min-width: $tablet) {
+    width: 460px;
+    height: 78px;
+
+    &--welcome {
+      width: 461px;
+      height: 350px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    height: 78px;
+
+    &--welcome {
+      width: 460px;
+      height: 350px;
+    }
   }
 }

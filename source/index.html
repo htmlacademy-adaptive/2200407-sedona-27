@@ -5,6 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-favicon.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -40,8 +45,13 @@
     <main class="main-page">
       <section class="promo promo--main">
         <h1 class="visually-hidden">Сайт города Седона.</h1>
-        <img class="promo__label" src="img/welcome.svg" width="282" height="214"
-          alt="Приглашение для посещения города Седона.">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/welcome-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/welcome-tablet.svg">
+          <img class="promo__label promo__label--welcome" src="img/welcome-mobile.svg" width="282" height="214"
+            alt="Приглашение для посещения города Седона.">
+        </picture>
+
       </section>
 
       <section class="inform">
@@ -58,8 +68,16 @@
             <span class="advantages__number">-№1-</span>
             <p class="advantages__description">Седона не аттракцион для туристов, там течёт своя жизнь</p>
           </div>
-          <img class="advantages__img" src="img/sedona-town.jpg" width="320" height="260"
-            alt="Настоящий городок Cедона.">
+          <div class="advantages__wrapper-img">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/sedona-town-desktop.jpg 1x, img/sedona-town-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/sedona-town-tablet.jpg 1x, img/sedona-town-tablet@2x.jpg 2x">
+              <img class="advantages__img" src="img/sedona-town-mobile.jpg" srcset="img/sedona-town-mobile@2x.jpg 2x"
+                width="320" height="260" alt="Настоящий городок Cедона.">
+            </picture>
+          </div>
         </div>
 
 
@@ -80,8 +98,16 @@
 
 
         <div class="advantages__row">
-          <img class="advantages__img" src="img/devils-bridge.jpg" width="320" height="260"
-            alt="Мост дьявола в седоне.">
+          <div class="advantages__wrapper-img">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/devils-bridge-desktop.jpg 1x, img/devils-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/devils-bridge-tablet.jpg 1x, img/devils-bridge-tablet@2x.jpg 2x">
+              <img class="advantages__img" src="img/devils-bridge-mobile.jpg"
+                srcset="img/devils-bridge-mobile@2x.jpg 2x" width="320" height="260" alt="Мост дьявола в седоне.">
+            </picture>
+          </div>
           <div class="advantages__inform">
             <h3 class="advantages__title title">Там есть мост дьявола</h3>
             <span class="advantages__number">-№2-</span>

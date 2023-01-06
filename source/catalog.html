@@ -5,6 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-favicon.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -40,7 +45,13 @@
     <main class="main-page ">
       <section class="promo">
         <h1 class="visually-hidden"> Страница фото и видео достопримечательностей Седоны.</h1>
-        <img class="promo__label" src="img/sedona-label.svg" width="229" height="39" alt="Знаменитый город - Седона.">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/sedona-label-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/sedona-label-tablet.svg">
+          <img class="promo__label" src="img/sedona-label-mobile.svg" width="229" height="39"
+            alt="Знаменитый город - Седона.">
+        </picture>
+
       </section>
 
       <section class="catalog">
@@ -51,8 +62,17 @@
 
         <ul class="catalog__list">
           <li class="catalog__card card">
-            <img class="card__image" src="img/non-nativespaces.jpg" width="280" height="280"
-              alt="Природный ландшафт неродных просторов.">
+            <div class="card__wrapper-img">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/non-nativespaces-desktop.jpg 1x, img/non-nativespaces-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/non-nativespaces-tablet.jpg 1x, img/non-nativespaces-tablet@2x.jpg 2x">
+                <img class="card__image" src="img/non-nativespaces-mobile.jpg"
+                  srcset="img/non-nativespaces-mobile@2x.jpg 2x" width="280" height="280"
+                  alt="Природный ландшафт неродных просторов.">
+              </picture>
+            </div>
             <div class="card__description">
               <h3 class="card__title">Неродные просторы</h3>
               <span class="card__author">Автор фото: Борис</span>
@@ -68,8 +88,16 @@
           </li>
 
           <li class="catalog__card card">
-            <img class="card__image" src="img/local-flora.jpg" width="280" height="280"
-              alt="Местная растительность просторов.">
+            <div class="card__wrapper-img">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/local-flora-desktop.jpg 1x, img/local-flora-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/local-flora-tablet.jpg 1x, img/local-flora-tablet@2x.jpg 2x">
+                <img class="card__image" src="img/local-flora-mobile.jpg" srcset="img/local-flora-mobile@2x.jpg 2x"
+                  width="280" height="280" alt="Местная растительность просторов.">
+              </picture>
+            </div>
             <div class="card__description">
               <h3 class="card__title">Местная растительность</h3>
               <span class="card__author">Автор фото: Сергей</span>
@@ -85,7 +113,16 @@
           </li>
 
           <li class="catalog__card card">
-            <img class="card__image" src="img/road-north.jpg" width="280" height="280" alt="Дорога ведущая на север.">
+            <div class="card__wrapper-img">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/road-north-desktop.jpg 1x, img/road-north-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/road-north-tablet.jpg 1x, img/road-north-tablet@2x.jpg 2x">
+                <img class="card__image" src="img/road-north-mobile.jpg" srcset="img/road-north-mobile@2x.jpg 2x"
+                  width="280" height="280" alt="Дорога ведущая на север.">
+              </picture>
+            </div>
             <div class="card__description">
               <h3 class="card__title">Дорога на север</h3>
               <span class="card__author">Автор фото: Пётр</span>
@@ -102,8 +139,17 @@
           </li>
 
           <li class="catalog__card card">
-            <img class="card__image" src="img/devils-bridge.jpg" width="280" height="280"
-              alt="Дорога ведущая на север.">
+            <div class="card__wrapper-img">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/devils-bridge-catalog-desktop.jpg 1x, img/devils-bridge-catalog-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/devils-bridge-catalog-tablet.jpg 1x, img/devils-bridge-catalog-tablet@2x.jpg 2x">
+                <img class="card__image" src="img/devils-bridge-catalog-mobile.jpg"
+                  srcset="img/devils-bridge-catalog-mobile@2x.jpg 2x" width="280" height="280"
+                  alt="Окрестности Моста дьявола.">
+              </picture>
+            </div>
             <div class="card__description">
               <h3 class="card__title">Мост дьявола</h3>
               <span class="card__author">Автор фото: Антон</span>
