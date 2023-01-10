@@ -21,7 +21,7 @@
   }
 }
 
-.card__wrapper-img {
+.card__link {
   margin-bottom: 15px;
 
   @media (min-width: $tablet) {
@@ -30,7 +30,7 @@
 }
 
 .card__image,
-.card__wrapper-img {
+.card__link {
   height: 280px;
 
   @media (min-width: $tablet) {

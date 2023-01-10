@@ -207,6 +207,10 @@
       margin-bottom: 14px;
     }
 
+    &--border:not(:last-child) {
+      border-bottom: none;
+    }
+
     &--border:nth-child(2) {
       padding: 41px 43px;
     }

@@ -45,13 +45,14 @@
     <main class="main-page">
       <section class="promo promo--main">
         <h1 class="visually-hidden">Сайт города Седона.</h1>
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/welcome-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/welcome-tablet.svg">
-          <img class="promo__label promo__label--welcome" src="img/welcome-mobile.svg" width="282" height="214"
-            alt="Приглашение для посещения города Седона.">
-        </picture>
-
+        <div class="promo__label promo__label--welcome">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/welcome-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/welcome-tablet.svg">
+            <img class="promo__img promo__img--welcome" src="img/welcome-mobile.svg" width="282" height="214"
+              alt="Приглашение для посещения города Седона.">
+          </picture>
+        </div>
       </section>
 
       <section class="inform">
@@ -70,6 +71,11 @@
           </div>
           <div class="advantages__wrapper-img">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)"
+                srcset="img/sedona-town-desktop.webp 1x, img/sedona-town-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/sedona-town-tablet.webp 1x, img/sedona-town-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/sedona-town-mobile.webp 1x, img/sedona-town-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)"
                 srcset="img/sedona-town-desktop.jpg 1x, img/sedona-town-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)"
@@ -165,15 +171,7 @@
               <span class="visually-hidden">ВКонтакте.</span>
               <svg class="footer__social-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#a)">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M23.4 6c.2-.6 0-1-.7-1H20c-.6 0-1 .3-1.1.7 0 0-1.3 3.2-3.2 5.3-.7.6-1 .8-1.3.8-.1 0-.4-.2-.4-.7V5.9c0-.6-.2-.9-.7-.9H9.2c-.5 0-.7.3-.7.6 0 .6 1 .8 1 2.5V12c0 .8-.1 1-.5 1-.9 0-3-3.2-4.3-6.9-.3-.7-.5-1-1.2-1H1c-.8 0-.9.3-.9.7 0 .7.9 4.1 4.1 8.6 2.2 3 5.3 4.7 8 4.7 1.7 0 2-.4 2-1v-2.3c0-.8 0-.9.6-.9.4 0 1 .2 2.6 1.7 1.8 1.7 2.1 2.5 3.1 2.5H23c.8 0 1.2-.4 1-1.1-.3-.7-1.1-1.8-2.3-3L20 13c-.4-.5-.3-.7 0-1.1 0 0 3.2-4.4 3.5-6Z" />
-                </g>
-                <defs>
-                  <clipPath id="a">
-                    <path d="M0 0h24v24H0z" />
-                  </clipPath>
-                </defs>
+                <use xlink:href="img/sprite.svg#icon-vk"></use>
               </svg>
             </a>
           </li>
@@ -182,8 +180,7 @@
               <span class="visually-hidden">Телеграм.</span>
               <svg class="footer__social-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="m22.4 4.6-3.1 15c-.3 1-.9 1.3-1.8.8l-4.8-3.6-2.3 2.3c-.3.2-.5.4-1 .4l.3-4.9 9-8c.4-.4-.1-.6-.6-.3l-11 7-4.8-1.5c-1-.3-1-1 .2-1.5L21 3c.9-.3 1.6.2 1.3 1.5Z" />
+                <use xlink:href="img/sprite.svg#icon-telegram"></use>
               </svg>
             </a>
           </li>
@@ -192,8 +189,7 @@
               <span class="visually-hidden">Youtube.</span>
               <svg class="footer__social-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M19.2 5H4.8A2.9 2.9 0 0 0 2 7.8v8.3C2 17.7 3.3 19 4.8 19h14.4c1.6 0 2.8-1.3 2.8-2.8V7.8C22 6.3 20.8 5 19.2 5ZM9 15.4V8.6L16 12 9 15.4Z" />
+                <use xlink:href="img/sprite.svg#icon-youtube"></use>
               </svg>
             </a>
           </li>
@@ -205,8 +201,7 @@
           Разработано
           <svg class="footer__copyright-logo" width="36" height="36" viewBox="0 0 36 36" fill="currentColor"
             xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M18.2 2.3H18L4.5 3.5v23.6L18.1 35l13.4-7.7V3.6L18.2 2.2Zm11.4 11.5L18 7.3h-.2V7v.1L6.3 13.8V5.2L18 4.1l11.7 1.1v8.6Zm-11.7-5 11.6 6.4-4.5 2.5-7.2-4V15l6 3.3-1 .5-5-2.9v1.4l3.9 2.2-.8.4-3-1.7v1.4l1.9 1-1.9 1-11.4-6.3L18 8.8ZM6.4 16.7l11.4 6.5v1L10 19.7V21l8 4.6v1l-8-4.4v1.3l8 4.6 8.2-4.7v-5l3.4-1.9v9.6l-11.6 6.6-11.5-6.5v-9.5Z" />
+            <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
           </svg>
           <span class="visually-hidden">HTML academy.</span>
         </a>
@@ -214,6 +209,7 @@
     </footer>
   </div>
   <script src="./js/script.js"></script>
+
 </body>
 
 </html>

@@ -12,7 +12,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-top: 115px;
+    margin-top: 113px;
     padding: 0 120px;
   }
 }
@@ -29,25 +29,25 @@
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 27px;
+    margin-bottom: 29px;
   }
 }
 
 .feedback-form__description {
   @include font-set(14px, 21px, 400);
-  margin-bottom: 28px;
+  margin: 0 0 28px 0;
   text-transform: uppercase;
   text-align: center;
 
   @media (min-width: $tablet) {
     @include font-set(14px, 24px, 400);
     padding: 0 106px 0 107px;
-    margin-bottom: 102px;
+    margin: 0 0 102px 0;
   }
 
   @media (min-width: $desktop) {
     padding: 0 263px 0 262px;
-    margin-bottom: 66px;
+    margin: 0 0 66px 0;
   }
 }
 
@@ -57,9 +57,23 @@
     grid-template-columns: 1fr 1fr;
     gap: 70px;
     margin-bottom: 48px;
+    min-height: 338px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $gray-stripe;
+      content: "";
+    }
   }
 
   @media (min-width: $desktop) {
+    gap: 128px;
     margin-bottom: 56px;
   }
 }
@@ -91,11 +105,44 @@
 }
 
 .feedback-form__group-title {
-  margin-bottom: 20px;
+  position: relative;
+  width: 100%;
   text-align: center;
+  margin-bottom: 20px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 28px;
+    &--stripe::before,
+    &--stripe::after {
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $gray-stripe;
+      content: "";
+    }
+
+    &--stripe::before {
+      left: 0;
+    }
+
+    &--stripe::after {
+      right: 0;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &--stripe::before,
+    &--stripe::after {
+      width: 280px;
+    }
+  }
+}
+
+.feedback-form__group-text {
+  @media (min-width: $tablet) {
+    width: 400px;
+    margin: 0 auto;
   }
 }
 
@@ -181,7 +228,6 @@
       grid-template-columns: 1fr 1fr;
       column-gap: 32px;
       row-gap: 16px;
-      margin-bottom: 42px;
       padding: 0 84px;
     }
   }
@@ -196,7 +242,6 @@
     &--checkbox {
       grid-template-columns: auto auto auto auto;
       gap: 64px;
-      margin-bottom: 56px;
       padding: 31px 44px;
     }
   }
