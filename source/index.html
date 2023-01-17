@@ -10,7 +10,9 @@
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-favicon.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
 <body class="page-body">
@@ -18,7 +20,9 @@
     <header class="header">
       <nav class="header__navigation navigation navigation--closed navigation--nojs">
         <a class="navigation__logo-link">
-          <img class="navigation__logo-img" src="img/logo.svg" width="185" height="96" alt="Логотип сайта Sedona.">
+          <svg class="navigation__logo-img" width="185" height="96" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg>
         </a>
         <button class="navigation__button-toggle" type="button">
           <span class="visually-hidden">Открыть меню.</span>
@@ -45,14 +49,9 @@
     <main class="main-page">
       <section class="promo promo--main">
         <h1 class="visually-hidden">Сайт города Седона.</h1>
-        <div class="promo__label promo__label--welcome">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/welcome-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/welcome-tablet.svg">
-            <img class="promo__img promo__img--welcome" src="img/welcome-mobile.svg" width="282" height="214"
-              alt="Приглашение для посещения города Седона.">
-          </picture>
-        </div>
+        <svg class="promo__img promo__img--welcome" width="282" height="214" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/sprite.svg#welcome-label"></use>
+        </svg>
       </section>
 
       <section class="inform">
@@ -106,6 +105,11 @@
         <div class="advantages__row">
           <div class="advantages__wrapper-img">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)"
+                srcset="img/devils-bridge-desktop.webp 1x, img/devils-bridge-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/devils-bridge-tablet.webp 1x, img/devils-bridge-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/devils-bridge-mobile.webp 1x, img/devils-bridge-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)"
                 srcset="img/devils-bridge-desktop.jpg 1x, img/devils-bridge-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)"

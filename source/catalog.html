@@ -10,7 +10,9 @@
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-favicon.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
 <body class="page-body">
@@ -18,7 +20,9 @@
     <header class="header">
       <nav class="header__navigation navigation navigation--closed navigation--nojs">
         <a class="navigation__logo-link" href="index.html">
-          <img class="navigation__logo-img" src="img/logo.svg" width="185" height="96" alt="Логотип сайта Sedona.">
+          <svg class="navigation__logo-img" width="185" height="96" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg>
         </a>
         <button class="navigation__button-toggle" type="button">
           <span class="visually-hidden">Открыть меню.</span>
@@ -45,14 +49,9 @@
     <main class="main-page ">
       <section class="promo">
         <h1 class="visually-hidden"> Страница фото и видео достопримечательностей Седоны.</h1>
-        <div class="promo__label">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/sedona-label-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/sedona-label-tablet.svg">
-            <img class="promo__img" src="img/sedona-label-mobile.svg" width="229" height="39"
-              alt="Знаменитый город - Седона.">
-          </picture>
-        </div>
+        <svg class="promo__img" width="229" height="39" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/sprite.svg#sedona-label"></use>
+        </svg>
       </section>
 
       <section class="catalog">
@@ -65,6 +64,12 @@
           <li class="catalog__card card">
             <a class="card__link" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/non-nativespaces-desktop.webp 1x, img/non-nativespaces-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/non-nativespaces-tablet.webp 1x, img/non-nativespaces-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/non-nativespaces-mobile.webp 1x, img/non-nativespaces-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)"
                   srcset="img/non-nativespaces-desktop.jpg 1x, img/non-nativespaces-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)"
@@ -90,6 +95,11 @@
           <li class="catalog__card card">
             <a class="card__link" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/local-flora-desktop.webp 1x, img/local-flora-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/local-flora-tablet.webp 1x, img/local-flora-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/local-flora-mobile.webp 1x, img/local-flora-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)"
                   srcset="img/local-flora-desktop.jpg 1x, img/local-flora-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)"
@@ -114,6 +124,12 @@
           <li class="catalog__card card">
             <a class="card__link" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/road-north-desktop.webp 1x, img/road-north-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/road-north-tablet.webp 1x, img/road-north-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/road-north-mobile.webp 1x, img/road-north-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)"
                   srcset="img/road-north-desktop.jpg 1x, img/road-north-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)"
@@ -139,6 +155,12 @@
           <li class="catalog__card card">
             <a class="card__link" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/devils-bridge-catalog-desktop.webp 1x, img/devils-bridge-catalog-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/devils-bridge-catalog-tablet.webp 1x, img/devils-bridge-catalog-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/devils-bridge-catalog-mobile.webp 1x, img/devils-bridge-catalog-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)"
                   srcset="img/devils-bridge-catalog-desktop.jpg 1x, img/devils-bridge-catalog-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)"
