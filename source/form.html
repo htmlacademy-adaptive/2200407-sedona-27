@@ -10,7 +10,9 @@
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-favicon.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
 <body class="page-body">
@@ -18,7 +20,9 @@
     <header class="header">
       <nav class="header__navigation navigation navigation--closed navigation--nojs">
         <a class="navigation__logo-link" href="index.html">
-          <img class="navigation__logo-img" src="img/logo.svg" width="185" height="96" alt="Логотип сайта Sedona.">
+          <svg class="navigation__logo-img" width="185" height="96" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg>
         </a>
         <button class="navigation__button-toggle" type="button">
           <span class="visually-hidden">Открыть меню.</span>
@@ -45,14 +49,9 @@
     <main class="main-page ">
       <section class="promo">
         <h1 class="visually-hidden">Страница формы отзыва для отелей Седона.</h1>
-        <div class="promo__label">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="img/sedona-label-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/sedona-label-tablet.svg">
-            <img class="promo__img" src="img/sedona-label-mobile.svg" width="229" height="39"
-              alt="Знаменитый город - Седона.">
-          </picture>
-        </div>
+        <svg class="promo__img" width="229" height="39" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/sprite.svg#sedona-label"></use>
+        </svg>
       </section>
 
       <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
