@@ -1,27 +1,32 @@
 .catalog {
-  margin-top: 30px;
+  margin-top: 38px;
   text-align: center;
 
   @media (min-width: $tablet) {
+    margin-top: 66px;
     padding-left: 60px;
     padding-right: 60px;
   }
 
   @media (min-width: $desktop) {
     padding: 0;
+    margin-top: 98px;
   }
 }
 
 .catalog__title {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   padding: 0 20px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 20px;
+    @include font-set(30px, 26px, 700);
+    margin-bottom: 33px;
+    padding: 0 40px;
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 22px;
+    margin-bottom: 32px;
+    padding: 0 120px;
   }
 }
 
@@ -31,8 +36,20 @@
   padding: 0 20px;
   text-transform: uppercase;
 
+  br {
+    display: none;
+  }
+
+  &--video {
+    padding: 0 30px;
+  }
+
   @media (min-width: $tablet) {
     padding: 0 105px;
+
+    br {
+      display: inline-block;
+    }
 
     &--video {
       padding: 0 101px;
@@ -40,6 +57,8 @@
   }
 
   @media (min-width: $desktop) {
+    padding: 0 120px;
+
     &--video {
       padding: 0 177px;
     }
@@ -48,15 +67,17 @@
 
 .catalog__list {
   @include list-style-reset;
-  margin-top: 45px;
+  margin-top: 36px;
   display: grid;
 
   @media (min-width: $tablet) {
     grid-template-columns: 1fr 1fr;
+    margin-top: 80px;
   }
 
   @media (min-width: $desktop) {
     grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 89px;
   }
 }
 
@@ -64,11 +85,11 @@
   padding-top: 17px;
 
   @media (min-width: $tablet) {
-    padding-top: 57px;
+    padding-top: 53px;
   }
 
   @media (min-width: $desktop) {
-    padding-top: 66px;
+    padding-top: 60px;
     padding-left: 199px;
     padding-right: 201px;
   }
@@ -77,35 +98,44 @@
 .catalog__video-title {
   @include font-set(18px, 26px, 700);
   margin-bottom: 27px;
+  padding: 0 20px;
 
   @media (min-width: $tablet) {
     @include font-set(30px, 26px, 700);
-    margin-bottom: 24px;
+    margin-bottom: 32px;
   }
 }
 
 .catalog__video-container {
   position: relative;
   margin-top: 38px;
-
-  &::before {
-    position: absolute;
-    background-image: url("../img/icon-play.svg");
-    width: 48px;
-    height: 54px;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    content: "";
-  }
+  height: 177px;
 
   @media (min-width: $tablet) {
-    margin-top: 88px;
+    margin-top: 89px;
+    margin-bottom: 40px;
+    height: 500px;
   }
 
   @media (min-width: $desktop) {
     margin-top: 86px;
+    margin-bottom: 85px;
   }
+}
+
+.catalog__video-button {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/icon-play.svg");
+  width: 48px;
+  height: 54px;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  content: "";
+  cursor: pointer;
+  z-index: 2;
 }
 
 .catalog__video-show {
@@ -137,6 +167,14 @@
 
     &:first-child {
       min-height: 400px;
+    }
+
+    &:first-child .card__description {
+      padding: 22px 20px 15px 21px;
+    }
+
+    &:first-child .card__title {
+      margin: 0 0 1px 0;
     }
   }
 }

@@ -61,7 +61,7 @@
 
         <div class="feedback-form__container">
           <fieldset class="feedback-form__group feedback-form__group--introduction">
-            <legend class="feedback-form__group-title title">Представьтесь:</legend>
+            <legend class="feedback-form__group-title feedback-form__group-title--introduction title">Представьтесь:</legend>
 
             <div class="feedback-form__field">
               <label class="feedback-form__label" for="feedback-name">Имя*:</label>
@@ -83,15 +83,15 @@
           </fieldset>
 
           <fieldset class="feedback-form__group feedback-form__group--contacts">
-            <legend class="feedback-form__group-title title">Контактная информация:</legend>
+            <legend class="feedback-form__group-title feedback-form__group-title--left title">Контактная информация:</legend>
 
-            <div class="feedback-form__field">
+            <div class="feedback-form__field feedback-form__field--gap">
               <label class="feedback-form__label" for="feedback-phone">Контактный телефон*:</label>
               <input class="feedback-form__input feedback-form__input--phone" type="tel" name="feedback-phone"
                 id="feedback-phone" value="" placeholder="Введите телефон" required>
             </div>
 
-            <div class="feedback-form__field">
+            <div class="feedback-form__field feedback-form__field--gap">
               <label class="feedback-form__label" for="feedback-email">Электронная почта*:</label>
               <input class="feedback-form__input feedback-form__input--mail" type="email" name="feedback-email"
                 id="feedback-email" value="" placeholder="Введите e-mail" required>
@@ -99,9 +99,9 @@
           </fieldset>
         </div>
 
-        <fieldset class="feedback-form__group">
+        <fieldset class="feedback-form__group feedback-form__group--impression">
           <legend class="feedback-form__group-title feedback-form__group-title--stripe title">
-            <div class="feedback-form__group-text">ваше общее впечатление:</div>
+            <span class="feedback-form__group-text">ваше общее впечатление:</span>
           </legend>
           <ul class="feedback-form__list feedback-form__list--radio">
             <li class="feedback-form__item">
@@ -131,9 +131,9 @@
           </ul>
         </fieldset>
 
-        <fieldset class="feedback-form__group">
+        <fieldset class="feedback-form__group feedback-form__group--visited">
           <legend class="feedback-form__group-title feedback-form__group-title--stripe title">
-            <div class="feedback-form__group-text">посещенные достопримечательности:</div>
+            <span class="feedback-form__group-text">посещенные достопримечательности:</span>
           </legend>
           <ul class="feedback-form__list feedback-form__list--checkbox">
             <li class="feedback-form__item ">
@@ -170,9 +170,9 @@
           </ul>
         </fieldset>
 
-        <fieldset class="feedback-form__group">
+        <fieldset class="feedback-form__group feedback-form__group--feelings">
           <legend class="feedback-form__group-title feedback-form__group-title--stripe title">
-            <div class="feedback-form__group-text">Опишите свои эмоции:</div>
+            <span class="feedback-form__group-text">Опишите свои эмоции:</span>
           </legend>
           <textarea class="feedback-form__textarea" name="text-review"
             placeholder="Опишите подробно все свои восторги"></textarea>
@@ -224,7 +224,7 @@
       <div class="footer__copyright">
         <a class="footer__copyright-link" href="https://htmlacademy.ru/">
           Разработано
-          <svg class="footer__copyright-logo" width="36" height="36" viewBox="0 0 36 36" fill="currentColor"
+          <svg class="footer__copyright-logo" width="27" height="34" viewBox="0 0 27 34" fill="currentColor"
             xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
           </svg>

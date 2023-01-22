@@ -1,9 +1,9 @@
 .inform {
-  padding: 32px 18px;
+  padding: 32px 18px 15px 18px;
   text-align: center;
 
   @media (min-width: $tablet) {
-    padding: 48px 0 55px 0;
+    padding: 45px 0 53px 0;
     max-width: 520px;
     margin: 0 auto;
   }
@@ -17,7 +17,8 @@
 .inform__title {
   @include font-set(18px, 26px, 700);
   text-transform: uppercase;
-  margin-bottom: 35px;
+  margin-bottom: 38px;
+  padding: 0 10px;
 
   @media (min-width: $tablet) {
     @include font-set(21px, 26px, 700);
@@ -29,4 +30,5 @@
   @include font-set(14px, 21px, 400);
   text-transform: uppercase;
   color: $black-lighter;
+  margin: 0;
 }

@@ -3,6 +3,7 @@
   border: none;
   padding: 0;
   background-color: transparent;
+  cursor: pointer;
 
   @media (min-width: $desktop) {
     color: $white;
@@ -11,10 +12,10 @@
 
 .like-button__counter {
   @include font-set(14px, 21px, 700);
-  margin-left: 14px;
+  margin-left: 11px;
 
   @media (min-width: $tablet) {
-    margin-left: 9px;
+    margin-left: 6px;
   }
 }
 

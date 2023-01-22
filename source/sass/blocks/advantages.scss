@@ -39,36 +39,68 @@
   padding: 37px 18px;
 
   &--divider {
-    padding: 50px 18px 40px 18px;
+    padding: 72px 18px 38px 18px;
   }
 
   @media (min-width: $tablet) {
     width: 256px;
     min-height: 256px;
-    padding: 52px 33px 31px 33px;
+    padding: 53px 33px 31px 33px;
+
+    &--narrow {
+      padding: 53px 43px 31px 43px;
+    }
   }
 
   @media (min-width: $desktop) {
     width: 400px;
-    padding: 52px 50px 51px 50px;
+    padding: 52px 60px 51px 60px;
+
+    &--narrow {
+      padding: 53px 83px 31px 83px;
+    }
   }
 }
 
 .advantages__wrapper-img {
   height: 260px;
 
+  &__end {
+    order: 1;
+  }
+
   @media (min-width: $tablet) {
     height: 256px;
+
+    &__end {
+      order: 0;
+    }
   }
 }
 
 .advantages__title {
   @include font-set(18px, 26px, 700);
   text-transform: uppercase;
-  margin-bottom: 11px;
+  margin-bottom: 7px;
+
+  br {
+    display: none;
+  }
 
   @media (min-width: $tablet) {
-    margin-bottom: 12px;
+    font-size: 21px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 34px;
+    padding-right: 34px;
+
+    br {
+      display: inline-block;
+    }
   }
 }
 
@@ -112,7 +144,7 @@
   padding: 0 18px;
 
   &--icon {
-    padding: 23px 18px 46px 18px;
+    padding: 23px 18px 43px 18px;
   }
 
   &--numbers {
@@ -141,11 +173,11 @@
   }
 
   &--border:nth-child(2) {
-    padding: 24px 24px;
+    padding: 24px 24px 21px 24px;
   }
 
   &--border:last-child {
-    padding: 24px 12px 28px 12px;
+    padding: 24px 14px 27px 12px;
   }
 
   &--icon {
@@ -165,6 +197,8 @@
     width: 40px;
     height: 40px;
     content: "";
+    margin-top: -4px;
+    background-repeat: no-repeat;
   }
 
   &--food::before {
@@ -177,9 +211,12 @@
 
   &--present::before {
     background-image: url("../img/icon-present.svg");
+    background-position: center;
     width: 40px;
     height: 40px;
     content: "";
+    margin-top: -4px;
+    background-repeat: no-repeat;
   }
 
   @media (min-width: $tablet) {
@@ -195,16 +232,39 @@
       gap: 0;
     }
 
+    &--icon:not(:last-child) {
+      margin-bottom: 0;
+    }
+
     &--housing::before {
+      margin-top: -2px;
       margin-bottom: 26px;
+      background-size: 80px 76px;
+      width: 80px;
+      height: 74px;
+    }
+
+    &--food {
+      padding: 62px 50px 61px 50px;
     }
 
     &--food::before {
       margin-bottom: 26px;
+      background-size: 80px 70px;
+      width: 80px;
+      height: 70px;
+    }
+
+    &--present {
+      padding: 64px 40px;
     }
 
     &--present::before {
+      margin-top: 3px;
       margin-bottom: 14px;
+      background-size: 67px 75px;
+      width: 67px;
+      height: 75px;
     }
 
     &--border:not(:last-child) {
@@ -242,10 +302,15 @@
 
     &--food::before {
       margin-bottom: 25px;
+      background-size: 73px 69px;
+      width: 73px;
+      height: 69px;
     }
 
     &--present::before {
       margin-bottom: 26px;
+      background-size: 77px 75px;
+      width: 77px;
     }
 
     &--border:nth-child(2) {
@@ -260,15 +325,26 @@
 }
 
 .advantages__item-title {
+  margin-top: 9px;
   margin-bottom: 9px;
   color: $black;
 
+  &--numbers {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
   @media (min-width: $tablet) {
     text-align: center;
+    margin-top: 0;
     margin-bottom: 23px;
 
     &--numbers {
       margin-bottom: 0;
+    }
+
+    &--narrow {
+      padding: 0 20px;
     }
   }
 
@@ -280,11 +356,12 @@
 }
 
 .advantages__item-number {
-  margin-bottom: 22px;
+  @include font-set(14px, 21px, 400);
+  margin-bottom: 20px;
   color: $black-lighter;
 
   @media (min-width: $tablet) {
-    margin: 11px 0 23px 0;
+    margin: 13px 0 23px 0;
   }
 
   @media (min-width: $desktop) {
@@ -300,11 +377,19 @@
   grid-column-start: -1;
   grid-column-end: -2;
 
+  br {
+    display: none;
+  }
+
   &--center {
     text-align: center;
   }
 
   @media (min-width: $tablet) {
     text-align: center;
+
+    br {
+      display: inline-block;
+    }
   }
 }
