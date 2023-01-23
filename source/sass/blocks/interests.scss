@@ -36,15 +36,15 @@
   margin: 0 0 32px 0;
   text-align: center;
 
-  br {
+  .break-text-tablet {
     display: none;
   }
 
   @media (min-width: $tablet) {
     margin-bottom: 42px;
 
-    br {
-      display: inline-block;
+    .break-text-tablet {
+      display: block;
     }
   }
 

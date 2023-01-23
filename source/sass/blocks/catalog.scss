@@ -36,7 +36,7 @@
   padding: 0 20px;
   text-transform: uppercase;
 
-  br {
+  .break-text-tablet {
     display: none;
   }
 
@@ -47,8 +47,8 @@
   @media (min-width: $tablet) {
     padding: 0 105px;
 
-    br {
-      display: inline-block;
+    .break-text-tablet {
+      display: block;
     }
 
     &--video {
