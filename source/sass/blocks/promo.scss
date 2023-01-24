@@ -8,7 +8,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 52px;
-  padding-bottom: 67px;
+  padding-bottom: 63px;
   text-align: center;
 
   @media (min-resolution: 2dppx) {
@@ -18,7 +18,7 @@
   &--main {
     min-height: 389px;
     padding-top: 90px;
-    padding-bottom: 85px;
+    padding-bottom: 81px;
   }
 
   &::before {
@@ -26,6 +26,8 @@
     background-image: url("../img/divider.svg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: auto;
+    object-fit: contain;
     bottom: 0;
     left: 0;
     right: 0;
@@ -36,7 +38,7 @@
 
   @media (min-width: $tablet) {
     min-height: 290px;
-    padding: 95px 0 117px 0;
+    padding: 95px 0 113px 0;
     background-image: url("../img/back-main-tablet.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -52,7 +54,7 @@
 
   @media (min-width: $desktop) {
     min-height: 301px;
-    padding: 101px 0 120px 0;
+    padding: 101px 0 116px 0;
     background-image: url("../img/back-main-desktop.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -62,12 +64,11 @@
     &--main {
       min-height: 518px;
       padding-top: 78px;
-      padding-bottom: 90px;
+      padding-bottom: 86px;
     }
   }
 }
 
-.promo__label,
 .promo__img {
   @media (min-width: $tablet) {
     margin: 0 auto;

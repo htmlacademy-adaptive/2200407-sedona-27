@@ -7,7 +7,7 @@
   padding: 38px 18px 49px 18px;
 
   @media (min-width: $tablet) {
-    padding: 60px 166px 58px 167px;
+    padding: 60px 155px 58px 155px;
     min-height: 318px;
   }
 
@@ -25,7 +25,7 @@
 
   @media (min-width: $tablet) {
     @include font-set(30px, 26px, 700);
-    margin-bottom: 21px;
+    margin-bottom: 32px;
   }
 }
 
@@ -36,8 +36,20 @@
   margin: 0 0 32px 0;
   text-align: center;
 
+  .break-text-tablet {
+    display: none;
+  }
+
   @media (min-width: $tablet) {
-    margin-bottom: 40px;
+    margin-bottom: 42px;
+
+    .break-text-tablet {
+      display: block;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 46px;
   }
 }
 

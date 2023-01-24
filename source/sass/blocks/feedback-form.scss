@@ -1,13 +1,12 @@
 .feedback-form {
   margin-top: 36px;
   margin-bottom: 24px;
-  padding: 0 20px;
   display: grid;
   grid-template-columns: 1fr;
 
   @media (min-width: $tablet) {
     margin-top: 64px;
-    margin-bottom: 64px;
+    margin-bottom: 60px;
     padding: 0 60px;
   }
 
@@ -20,6 +19,7 @@
 .feedback-form__title {
   @include font-set(18px, 26px, 700);
   margin: 0 0 24px 0;
+  padding: 0 20px;
   text-transform: uppercase;
   text-align: center;
 
@@ -36,6 +36,7 @@
 .feedback-form__description {
   @include font-set(14px, 21px, 400);
   margin: 0 0 28px 0;
+  padding: 0 20px;
   text-transform: uppercase;
   text-align: center;
 
@@ -75,6 +76,11 @@
   @media (min-width: $desktop) {
     gap: 128px;
     margin-bottom: 56px;
+
+    &::before {
+      left: 52%;
+      transform: translateX(-6px);
+    }
   }
 }
 
@@ -82,9 +88,12 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  padding: 0;
+  padding: 24px 20px 0 20px;
   margin: 0 0 39px 0;
   border: none;
+  border-top: 1px solid $basic-gray;
+  width: 100%;
+  box-sizing: border-box;
 
   &--introduction {
     margin-bottom: 23px;
@@ -94,23 +103,76 @@
     margin-bottom: 18px;
   }
 
+  &--impression,
+  &--visited {
+    margin-bottom: 24px;
+  }
+
+  &--feelings {
+    margin-bottom: 56px;
+  }
+
   @media (min-width: $tablet) {
+    border: none;
     margin-bottom: 48px;
+    padding: 0;
 
     &--introduction,
     &--contacts {
       margin: 0;
+    }
+
+    &--introduction {
+      width: 280px;
+    }
+
+    &--contacts {
+      width: 298px;
+    }
+
+    &--visited {
+      margin-bottom: 43px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &--introduction {
+      width: 430px;
+    }
+
+    &--contacts {
+      width: 402px;
+    }
+
+    &--impression {
+      margin-bottom: 57px;
+    }
+
+    &--visited {
+      margin-bottom: 56px;
     }
   }
 }
 
 .feedback-form__group-title {
   position: relative;
-  width: 100%;
   text-align: center;
   margin-bottom: 20px;
+  box-sizing: border-box;
+  float: left;
 
   @media (min-width: $tablet) {
+    width: 100%;
+    margin-bottom: 28px;
+
+    &--introduction {
+      padding-left: 42px;
+    }
+
+    &--left {
+      text-align: left;
+    }
+
     &--stripe::before,
     &--stripe::after {
       position: absolute;
@@ -132,6 +194,14 @@
   }
 
   @media (min-width: $desktop) {
+    &--introduction {
+      padding-left: 65px;
+    }
+
+    &--left {
+      margin-left: 30px;
+    }
+
     &--stripe::before,
     &--stripe::after {
       width: 280px;
@@ -141,6 +211,7 @@
 
 .feedback-form__group-text {
   @media (min-width: $tablet) {
+    display: inline-block;
     width: 400px;
     margin: 0 auto;
   }
@@ -151,6 +222,19 @@
   flex-wrap: wrap;
   flex-direction: column;
   margin-bottom: 16px;
+
+  @media (min-width: $tablet) {
+    &--gap {
+      padding-left: 20px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &--gap {
+      padding-left: 0;
+      padding-right: 30px;
+    }
+  }
 }
 
 .feedback-form__label {
@@ -158,6 +242,7 @@
   text-transform: uppercase;
   position: relative;
   padding-left: 16px;
+  box-sizing: border-box;
 
   &--action {
     padding-left: 62px;
@@ -214,13 +299,14 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  box-sizing: border-box;
 
   @media (min-width: $tablet) {
     &--radio {
-      padding: 0 37px 0 36px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
+      padding: 0 37px 0 36px;
     }
 
     &--checkbox {
@@ -237,11 +323,12 @@
       grid-template-columns: auto auto auto;
       gap: 28px;
       min-height: 80px;
+      padding: 0 53px;
     }
 
     &--checkbox {
+      max-width: 960px;
       grid-template-columns: auto auto auto auto;
-      gap: 64px;
       padding: 31px 44px;
     }
   }
@@ -260,6 +347,16 @@
   @media (min-width: $tablet) {
     &:not(:last-child) {
       margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &:not(:first-child, :last-child) {
+      margin-left: 15px;
+    }
+
+    &:last-child {
+      justify-content: flex-end;
     }
   }
 }
@@ -351,6 +448,7 @@
   color: $gray-lighter-opacity-60;
 
   @media (min-width: $tablet) {
+    @include font-set(14px, 21px, 400);
     align-items: flex-end;
     margin: 23px 0 14px 0;
   }

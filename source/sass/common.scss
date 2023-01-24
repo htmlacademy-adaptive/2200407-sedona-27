@@ -20,3 +20,8 @@ img {
   overflow: hidden;
   border: 0;
 }
+
+.break-text-tablet {
+  content: "\A";
+  white-space: pre;
+}

@@ -11,12 +11,21 @@
     border-top: 1px solid $basic-gray;
   }
 
+  &:last-child {
+    padding-top: 22px;
+    padding-bottom: 23px;
+  }
+
   @media (min-width: $tablet) {
     padding: 0;
     border-bottom: none;
 
     &:first-child {
       border-top: none;
+    }
+
+    &:last-child {
+      padding: 0;
     }
   }
 }
@@ -72,6 +81,7 @@
     width: 100%;
     background-color: $black-opacity-30;
     color: $white;
+    padding: 17px 20px 13px 25px;
   }
 }
 
@@ -80,6 +90,10 @@
   text-transform: uppercase;
   margin: 0 0 1px 0;
   text-align: left;
+
+  @media (min-width: $desktop) {
+    margin-bottom: 4px;
+  }
 }
 
 .card__author {
@@ -96,5 +110,10 @@
   @media (min-width: $tablet) {
     grid-column: -1/-2;
     grid-row: -3/-1;
+    margin-top: -10px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: -5px;
   }
 }
