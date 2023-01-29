@@ -239,14 +239,17 @@
 
 .feedback-form__label {
   @include font-set(14px, 21px, 400);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-transform: uppercase;
   position: relative;
-  padding-left: 16px;
   box-sizing: border-box;
+  margin-left: 16px;
 
   &--action {
-    padding-left: 62px;
     text-transform: none;
+    margin-left: 0;
   }
 
   &:hover .feedback-form__mark {
@@ -324,12 +327,28 @@
       gap: 28px;
       min-height: 80px;
       padding: 0 53px;
+
+      .feedback-form__item:nth-child(3n+1) {
+        margin-left: 0;
+      }
+
+      .feedback-form__item:nth-child(3n) {
+        margin-left: auto;
+      }
     }
 
     &--checkbox {
       max-width: 960px;
       grid-template-columns: auto auto auto auto;
       padding: 31px 44px;
+
+      .feedback-form__item:nth-child(4n+1) {
+        margin-left: 0;
+      }
+
+      .feedback-form__item:nth-child(4n) {
+        margin-left: auto;
+      }
     }
   }
 }
@@ -338,7 +357,6 @@
   display: flex;
   align-items: center;
   min-height: 46px;
-
 
   &:not(:last-child) {
     margin-bottom: 16px;
@@ -351,12 +369,8 @@
   }
 
   @media (min-width: $desktop) {
-    &:not(:first-child, :last-child) {
+    &:not(:first-child) {
       margin-left: 15px;
-    }
-
-    &:last-child {
-      justify-content: flex-end;
     }
   }
 }
@@ -366,13 +380,14 @@
 }
 
 .feedback-form__mark {
-  position: absolute;
-  left: 0;
-  top: -12px;
+  position: relative;
   width: 46px;
+  min-width: 46px;
   height: 46px;
   background-color: $gray-lighter;
-  content: "";
+  display: block;
+  box-sizing: border-box;
+  margin-right: 16px;
 
   &--radio {
     border-radius: 50%;

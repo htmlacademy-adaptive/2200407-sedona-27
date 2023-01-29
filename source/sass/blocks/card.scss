@@ -68,7 +68,7 @@
 
   @media (min-width: $tablet) {
     grid-template-columns: 1fr auto;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: min-content min-content;
     min-height: 80px;
     background-color: $gray-lighter;
     padding: 22px 20px 15px 20px;
